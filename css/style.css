@@ -31,9 +31,6 @@
     a.nav-link {
         color: white;
     }
-    /* main {
-        background-color: white;
-    } */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -72,9 +69,6 @@
     a.nav-link {
         color: white;
     }
-    /* main {
-        background-color: none;
-    } */
 }
 
 @media only screen and (min-width: 992px) {
@@ -96,6 +90,9 @@
     }
     hr {
         display: none;
+    }
+    main {
+        background-color: rgb(238, 229, 229);
     }
 }
 
@@ -153,9 +150,7 @@ footer a {
 }
 
 main {
-    background-color: rgb(238, 229, 229);
     position: relative;
-
 }
 
 #banner {
@@ -180,9 +175,14 @@ main {
     margin-bottom: 50px;
 }
 
-.row {
+/* .row {
     display: inline-block;
     clear: both;
+} */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .box {
@@ -191,12 +191,10 @@ main {
 
 img {
     padding: 50px;
-     /* 0px 50px 50px; */
     width: 100%;
     height: auto;
 }
 
 .col-content {
     padding: 50px;
-      /* 0px 50px 50px; */
 }
