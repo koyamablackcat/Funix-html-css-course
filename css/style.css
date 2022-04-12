@@ -9,27 +9,11 @@
      [class*="col-"] {
       width: 100%;
     }
-    div#banner {
-        display: none;
-    }
-    div#banner-content {
-        position: static;
-        color: black;
-    }
     h2 {
         font-size: 32px;
     }
     h3 {
         font-size: 32px;
-    }
-    nav#menu {
-        background-color: rgb(38, 56, 66);
-    }
-    ul li {
-        padding-top: 10px;
-    }
-    a.nav-link {
-        color: white;
     }
 }
 
@@ -47,74 +31,30 @@
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-    div#banner {
-        display: none;
-    }
-    div#banner-content {
-        position: static;
-        color: black;
-    }
     h2 {
         font-size: 32px;
     }
     h3 {
         font-size: 32px;
     }
-    nav#menu {
-        background-color: rgb(38, 56, 66);
-    }
-    ul li {
-        padding-top: 10px;
-    }
-    a.nav-link {
-        color: white;
-    }
 }
 
-@media only screen and (min-width: 992px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-    div#banner {
-        display: block;
-    }
-    hr {
-        display: none;
-    }
-    main {
-        background-color: rgb(238, 229, 229);
-    }
-}
-
-
-#menu {
+#nav {
     position: fixed;
     top: 0px;
-    background-color: white;
+    background-color: rgb(38, 56, 66);
     width: 100%;
     z-index: 100;
 }
 
-.left-menu {
+#left {
     float: left;
-    position: relative;
-    left: 50px;
+    padding-left: 50px;
 }
 
-.right-menu {
+#right {
     float: right;
-    position: relative;
-    right: 50px;
+    padding-right: 50px;
 }
 
 ul {
@@ -122,6 +62,7 @@ ul {
 }
 
 ul li {
+    padding-top: 10px;
     display:inline-block;
     text-transform: uppercase;
     margin: 10px;
@@ -129,8 +70,15 @@ ul li {
 
 a {
     text-decoration: none;
-    color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a.nav-link {
+    color: white;
+}
+
+footer a {
+    color: #0079bc;
 }
 
 p {
@@ -145,15 +93,12 @@ hr {
     margin-right: 50px;
 }
 
-footer a {
-    color: #0079bc;
-}
-
 main {
     position: relative;
 }
 
 #banner {
+    display: none;
     padding-top: 500px;
     margin-top: 39px;
     background-image: url(https://s3.amazonaws.com/codecademy-content/courses/ltp/img/lodging.png);
@@ -163,10 +108,8 @@ main {
 }
 
 #banner-content {
-    position: absolute;
-    top: 120px;
-    left: 50px;
-    color: white;
+    position: static;
+    color: black;
 }
 
 .content {
@@ -197,4 +140,46 @@ img {
 
 .col-content {
     padding: 50px;
+}
+
+
+@media only screen and (min-width: 992px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    nav#nav {
+        background-color: white;
+    }
+    ul li {
+        padding-top: 0px;
+    }
+    a.nav-link {
+        color: black;
+    }
+    div#banner {
+        display: block;
+    }
+    div#banner-content {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        color: white;
+    }
+    hr {
+        display: none;
+    }
+    main {
+        background-color: rgb(238, 229, 229);
+    }
+    
 }
